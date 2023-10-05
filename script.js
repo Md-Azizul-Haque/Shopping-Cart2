@@ -45,6 +45,20 @@ function calculate() {
     const total = subtotal + totalTax;
     setPrice(total,'total');
 }
+function remove() {
+    const phonePrice = document.getElementById('phonePrice');
+    phonePrice.innerText = '1219';
+    const phoneInputField = document.getElementById('phoneInputField');
+    phoneInputField.value = '1';
+    const casePrice = document.getElementById('casePrice');
+    casePrice.innerText = '59';
+    const caseInputField = document.getElementById('caseInputField');
+    caseInputField.value = '1';
+    const subTotalId = document.getElementById('subtotal');
+    subTotalId.innerText = '1278';
+    const TotalId = document.getElementById('total');
+    TotalId.innerText = '1278';
+}
 
 
 document.getElementById('caseMinusBtn').addEventListener('click', function() {
@@ -67,6 +81,12 @@ document.getElementById('phonMinusBtn').addEventListener('click', function(){
     const fieldValue = updateCaseNumber(false,'phoneInputField');
     phonePrice(fieldValue);
     calculate();
+})
+document.getElementById('casePriceRemove').addEventListener('click', function () {
+    remove();
+})
+document.getElementById('phonePriceRemove').addEventListener('click', function () {
+    remove();
 })
 
 
